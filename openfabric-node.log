@@ -1,0 +1,453 @@
+17-03-2023 07:37:29.652 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+17-03-2023 07:37:29.680 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_302 on Mohammads-Air with PID 31160 (/Users/dandashi/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dandashi in /Users/dandashi/Downloads/openfabric-test)
+17-03-2023 07:37:29.681 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+17-03-2023 07:37:30.767 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17-03-2023 07:37:30.833 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interfaces.
+17-03-2023 07:37:31.561 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+17-03-2023 07:37:31.567 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+17-03-2023 07:37:31.567 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+17-03-2023 07:37:31.567 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+17-03-2023 07:37:31.648 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+17-03-2023 07:37:31.649 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1886 ms
+17-03-2023 07:37:31.931 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+17-03-2023 07:37:31.995 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+17-03-2023 07:37:32.088 [main] INFO  liquibase.database.log - Set default schema name to public
+17-03-2023 07:37:35.493 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.LockException: liquibase.exception.DatabaseException: ERROR: relation "databasechangeloglock" already exists [Failed SQL: (0) CREATE TABLE public.databasechangeloglock (ID INTEGER NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP WITHOUT TIME ZONE, LOCKEDBY VARCHAR(255), CONSTRAINT databasechangeloglock_pkey PRIMARY KEY (ID))]
+17-03-2023 07:37:35.496 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+17-03-2023 07:37:35.499 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+17-03-2023 07:37:35.502 [main] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+17-03-2023 07:37:35.518 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17-03-2023 07:37:35.545 [main] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.LockException: liquibase.exception.DatabaseException: ERROR: relation "databasechangeloglock" already exists [Failed SQL: (0) CREATE TABLE public.databasechangeloglock (ID INTEGER NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP WITHOUT TIME ZONE, LOCKEDBY VARCHAR(255), CONSTRAINT databasechangeloglock_pkey PRIMARY KEY (ID))]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at ai.openfabric.api.Application.main(Application.java:13)
+Caused by: liquibase.exception.LockException: liquibase.exception.DatabaseException: ERROR: relation "databasechangeloglock" already exists [Failed SQL: (0) CREATE TABLE public.databasechangeloglock (ID INTEGER NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP WITHOUT TIME ZONE, LOCKEDBY VARCHAR(255), CONSTRAINT databasechangeloglock_pkey PRIMARY KEY (ID))]
+	at liquibase.lockservice.StandardLockService.acquireLock(StandardLockService.java:331)
+	at liquibase.lockservice.StandardLockService.waitForLock(StandardLockService.java:249)
+	at liquibase.Liquibase.lambda$update$1(Liquibase.java:239)
+	at liquibase.Scope.lambda$child$0(Scope.java:180)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Scope.child(Scope.java:158)
+	at liquibase.Liquibase.runInScope(Liquibase.java:2447)
+	at liquibase.Liquibase.update(Liquibase.java:236)
+	at liquibase.Liquibase.update(Liquibase.java:221)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:328)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:283)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+Caused by: liquibase.exception.DatabaseException: ERROR: relation "databasechangeloglock" already exists [Failed SQL: (0) CREATE TABLE public.databasechangeloglock (ID INTEGER NOT NULL, LOCKED BOOLEAN NOT NULL, LOCKGRANTED TIMESTAMP WITHOUT TIME ZONE, LOCKEDBY VARCHAR(255), CONSTRAINT databasechangeloglock_pkey PRIMARY KEY (ID))]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:447)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:78)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:161)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:126)
+	at liquibase.lockservice.StandardLockService.init(StandardLockService.java:117)
+	at liquibase.lockservice.StandardLockService.acquireLock(StandardLockService.java:288)
+	... 31 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "databasechangeloglock" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:290)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:443)
+	... 36 common frames omitted
+17-03-2023 07:40:12.816 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+17-03-2023 07:40:12.839 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_302 on Mohammads-Air with PID 31352 (/Users/dandashi/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dandashi in /Users/dandashi/Downloads/openfabric-test)
+17-03-2023 07:40:12.840 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+17-03-2023 07:40:13.897 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17-03-2023 07:40:13.959 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interfaces.
+17-03-2023 07:40:14.702 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+17-03-2023 07:40:14.708 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+17-03-2023 07:40:14.708 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+17-03-2023 07:40:14.708 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+17-03-2023 07:40:14.811 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+17-03-2023 07:40:14.811 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1892 ms
+17-03-2023 07:40:15.074 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+17-03-2023 07:40:15.124 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+17-03-2023 07:40:15.199 [main] INFO  liquibase.database.log - Set default schema name to public
+17-03-2023 07:40:15.285 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+17-03-2023 07:40:15.698 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+17-03-2023 07:40:15.820 [main] INFO  liquibase.changelog.log - Custom SQL executed
+17-03-2023 07:40:15.822 [main] INFO  liquibase.changelog.log - ChangeSet db/changelog/table-schema.xml::EXTENSION::andrei ran successfully in 58ms
+17-03-2023 07:40:15.831 [main] INFO  liquibase.changelog.log - Custom SQL executed
+17-03-2023 07:40:15.832 [main] INFO  liquibase.changelog.log - ChangeSet db/changelog/table-schema.xml::SEQUENCE::andrei ran successfully in 4ms
+17-03-2023 07:40:15.848 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+17-03-2023 07:40:15.851 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/table-schema.xml::WO_01::andrei:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "worker" already exists [Failed SQL: (0) CREATE TABLE public.worker (id CHAR(36) DEFAULT uuid_generate_v4() NOT NULL, name VARCHAR(255), created_at TIMESTAMP WITHOUT TIME ZONE, updated_at TIMESTAMP WITHOUT TIME ZONE, deleted_at TIMESTAMP WITHOUT TIME ZONE, CONSTRAINT worker_pkey PRIMARY KEY (id))]
+17-03-2023 07:40:15.851 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+17-03-2023 07:40:15.853 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+17-03-2023 07:40:15.860 [main] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+17-03-2023 07:40:15.883 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17-03-2023 07:40:15.902 [main] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/table-schema.xml::WO_01::andrei:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "worker" already exists [Failed SQL: (0) CREATE TABLE public.worker (id CHAR(36) DEFAULT uuid_generate_v4() NOT NULL, name VARCHAR(255), created_at TIMESTAMP WITHOUT TIME ZONE, updated_at TIMESTAMP WITHOUT TIME ZONE, deleted_at TIMESTAMP WITHOUT TIME ZONE, CONSTRAINT worker_pkey PRIMARY KEY (id))]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at ai.openfabric.api.Application.main(Application.java:13)
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/table-schema.xml::WO_01::andrei:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "worker" already exists [Failed SQL: (0) CREATE TABLE public.worker (id CHAR(36) DEFAULT uuid_generate_v4() NOT NULL, name VARCHAR(255), created_at TIMESTAMP WITHOUT TIME ZONE, updated_at TIMESTAMP WITHOUT TIME ZONE, deleted_at TIMESTAMP WITHOUT TIME ZONE, CONSTRAINT worker_pkey PRIMARY KEY (id))]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:126)
+	at liquibase.Liquibase.lambda$null$0(Liquibase.java:291)
+	at liquibase.Scope.lambda$child$0(Scope.java:180)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Scope.child(Scope.java:158)
+	at liquibase.Scope.child(Scope.java:243)
+	at liquibase.Liquibase.lambda$update$1(Liquibase.java:290)
+	at liquibase.Scope.lambda$child$0(Scope.java:180)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Scope.child(Scope.java:158)
+	at liquibase.Liquibase.runInScope(Liquibase.java:2447)
+	at liquibase.Liquibase.update(Liquibase.java:236)
+	at liquibase.Liquibase.update(Liquibase.java:221)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:328)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:283)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/table-schema.xml::WO_01::andrei:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "worker" already exists [Failed SQL: (0) CREATE TABLE public.worker (id CHAR(36) DEFAULT uuid_generate_v4() NOT NULL, name VARCHAR(255), created_at TIMESTAMP WITHOUT TIME ZONE, updated_at TIMESTAMP WITHOUT TIME ZONE, deleted_at TIMESTAMP WITHOUT TIME ZONE, CONSTRAINT worker_pkey PRIMARY KEY (id))]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:714)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:56)
+	at liquibase.changelog.ChangeLogIterator$2.lambda$null$0(ChangeLogIterator.java:113)
+	at liquibase.Scope.lambda$child$0(Scope.java:180)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Scope.child(Scope.java:158)
+	at liquibase.changelog.ChangeLogIterator$2.lambda$run$1(ChangeLogIterator.java:112)
+	at liquibase.Scope.lambda$child$0(Scope.java:180)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Scope.child(Scope.java:158)
+	at liquibase.Scope.child(Scope.java:243)
+	at liquibase.changelog.ChangeLogIterator$2.run(ChangeLogIterator.java:93)
+	at liquibase.Scope.lambda$child$0(Scope.java:180)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Scope.child(Scope.java:158)
+	at liquibase.Scope.child(Scope.java:243)
+	at liquibase.Scope.child(Scope.java:247)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:65)
+	... 36 common frames omitted
+Caused by: liquibase.exception.DatabaseException: ERROR: relation "worker" already exists [Failed SQL: (0) CREATE TABLE public.worker (id CHAR(36) DEFAULT uuid_generate_v4() NOT NULL, name VARCHAR(255), created_at TIMESTAMP WITHOUT TIME ZONE, updated_at TIMESTAMP WITHOUT TIME ZONE, deleted_at TIMESTAMP WITHOUT TIME ZONE, CONSTRAINT worker_pkey PRIMARY KEY (id))]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:447)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:78)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:161)
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1270)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1252)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:679)
+	... 56 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "worker" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:290)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:443)
+	... 61 common frames omitted
+17-03-2023 07:40:33.833 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+17-03-2023 07:40:33.856 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_302 on Mohammads-Air with PID 31368 (/Users/dandashi/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dandashi in /Users/dandashi/Downloads/openfabric-test)
+17-03-2023 07:40:33.856 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+17-03-2023 07:40:34.891 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17-03-2023 07:40:34.954 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interfaces.
+17-03-2023 07:40:35.661 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+17-03-2023 07:40:35.666 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+17-03-2023 07:40:35.667 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+17-03-2023 07:40:35.667 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+17-03-2023 07:40:35.750 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+17-03-2023 07:40:35.750 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1819 ms
+17-03-2023 07:40:36.025 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+17-03-2023 07:40:36.069 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+17-03-2023 07:40:36.146 [main] INFO  liquibase.database.log - Set default schema name to public
+17-03-2023 07:40:36.220 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+17-03-2023 07:40:36.624 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+17-03-2023 07:40:36.707 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+17-03-2023 07:40:36.710 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/table-schema.xml::WO_01::andrei:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "worker" already exists [Failed SQL: (0) CREATE TABLE public.worker (id CHAR(36) DEFAULT uuid_generate_v4() NOT NULL, name VARCHAR(255), created_at TIMESTAMP WITHOUT TIME ZONE, updated_at TIMESTAMP WITHOUT TIME ZONE, deleted_at TIMESTAMP WITHOUT TIME ZONE, CONSTRAINT worker_pkey PRIMARY KEY (id))]
+17-03-2023 07:40:36.710 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+17-03-2023 07:40:36.712 [main] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+17-03-2023 07:40:36.716 [main] INFO  o.a.catalina.core.StandardService.log - Stopping service [Tomcat]
+17-03-2023 07:40:36.733 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17-03-2023 07:40:36.753 [main] ERROR o.s.boot.SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/table-schema.xml::WO_01::andrei:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "worker" already exists [Failed SQL: (0) CREATE TABLE public.worker (id CHAR(36) DEFAULT uuid_generate_v4() NOT NULL, name VARCHAR(255), created_at TIMESTAMP WITHOUT TIME ZONE, updated_at TIMESTAMP WITHOUT TIME ZONE, deleted_at TIMESTAMP WITHOUT TIME ZONE, CONSTRAINT worker_pkey PRIMARY KEY (id))]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at ai.openfabric.api.Application.main(Application.java:13)
+Caused by: liquibase.exception.LiquibaseException: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/table-schema.xml::WO_01::andrei:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "worker" already exists [Failed SQL: (0) CREATE TABLE public.worker (id CHAR(36) DEFAULT uuid_generate_v4() NOT NULL, name VARCHAR(255), created_at TIMESTAMP WITHOUT TIME ZONE, updated_at TIMESTAMP WITHOUT TIME ZONE, deleted_at TIMESTAMP WITHOUT TIME ZONE, CONSTRAINT worker_pkey PRIMARY KEY (id))]
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:126)
+	at liquibase.Liquibase.lambda$null$0(Liquibase.java:291)
+	at liquibase.Scope.lambda$child$0(Scope.java:180)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Scope.child(Scope.java:158)
+	at liquibase.Scope.child(Scope.java:243)
+	at liquibase.Liquibase.lambda$update$1(Liquibase.java:290)
+	at liquibase.Scope.lambda$child$0(Scope.java:180)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Scope.child(Scope.java:158)
+	at liquibase.Liquibase.runInScope(Liquibase.java:2447)
+	at liquibase.Liquibase.update(Liquibase.java:236)
+	at liquibase.Liquibase.update(Liquibase.java:221)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:328)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:283)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 18 common frames omitted
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for changeset db/changelog/table-schema.xml::WO_01::andrei:
+     Reason: liquibase.exception.DatabaseException: ERROR: relation "worker" already exists [Failed SQL: (0) CREATE TABLE public.worker (id CHAR(36) DEFAULT uuid_generate_v4() NOT NULL, name VARCHAR(255), created_at TIMESTAMP WITHOUT TIME ZONE, updated_at TIMESTAMP WITHOUT TIME ZONE, deleted_at TIMESTAMP WITHOUT TIME ZONE, CONSTRAINT worker_pkey PRIMARY KEY (id))]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:714)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:56)
+	at liquibase.changelog.ChangeLogIterator$2.lambda$null$0(ChangeLogIterator.java:113)
+	at liquibase.Scope.lambda$child$0(Scope.java:180)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Scope.child(Scope.java:158)
+	at liquibase.changelog.ChangeLogIterator$2.lambda$run$1(ChangeLogIterator.java:112)
+	at liquibase.Scope.lambda$child$0(Scope.java:180)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Scope.child(Scope.java:158)
+	at liquibase.Scope.child(Scope.java:243)
+	at liquibase.changelog.ChangeLogIterator$2.run(ChangeLogIterator.java:93)
+	at liquibase.Scope.lambda$child$0(Scope.java:180)
+	at liquibase.Scope.child(Scope.java:189)
+	at liquibase.Scope.child(Scope.java:179)
+	at liquibase.Scope.child(Scope.java:158)
+	at liquibase.Scope.child(Scope.java:243)
+	at liquibase.Scope.child(Scope.java:247)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:65)
+	... 36 common frames omitted
+Caused by: liquibase.exception.DatabaseException: ERROR: relation "worker" already exists [Failed SQL: (0) CREATE TABLE public.worker (id CHAR(36) DEFAULT uuid_generate_v4() NOT NULL, name VARCHAR(255), created_at TIMESTAMP WITHOUT TIME ZONE, updated_at TIMESTAMP WITHOUT TIME ZONE, deleted_at TIMESTAMP WITHOUT TIME ZONE, CONSTRAINT worker_pkey PRIMARY KEY (id))]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:447)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:78)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:161)
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1270)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1252)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:679)
+	... 56 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: relation "worker" already exists
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:333)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:319)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:295)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:290)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:443)
+	... 61 common frames omitted
+17-03-2023 07:41:19.133 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+17-03-2023 07:41:19.158 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_302 on Mohammads-Air with PID 31392 (/Users/dandashi/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dandashi in /Users/dandashi/Downloads/openfabric-test)
+17-03-2023 07:41:19.159 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+17-03-2023 07:41:20.219 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17-03-2023 07:41:20.281 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interfaces.
+17-03-2023 07:41:20.986 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+17-03-2023 07:41:20.992 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+17-03-2023 07:41:20.992 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+17-03-2023 07:41:20.992 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+17-03-2023 07:41:21.073 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+17-03-2023 07:41:21.073 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1835 ms
+17-03-2023 07:41:21.345 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+17-03-2023 07:41:21.391 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+17-03-2023 07:41:21.472 [main] INFO  liquibase.database.log - Set default schema name to public
+17-03-2023 07:41:21.552 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+17-03-2023 07:41:21.936 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+17-03-2023 07:41:22.032 [main] INFO  liquibase.changelog.log - Table worker created
+17-03-2023 07:41:22.034 [main] INFO  liquibase.changelog.log - ChangeSet db/changelog/table-schema.xml::WO_01::andrei ran successfully in 32ms
+17-03-2023 07:41:22.040 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+17-03-2023 07:41:22.134 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+17-03-2023 07:41:22.165 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.12.Final
+17-03-2023 07:41:22.255 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17-03-2023 07:41:22.316 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17-03-2023 07:41:22.661 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17-03-2023 07:41:22.667 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+17-03-2023 07:41:22.700 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17-03-2023 07:41:24.934 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.Instant
+17-03-2023 07:41:24.942 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.OffsetDateTime
+17-03-2023 07:41:25.164 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: ff8e0641-dda5-49c3-98f1-5796e174d0ca
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+17-03-2023 07:41:25.221 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33399052, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11c25846, org.springframework.security.web.context.SecurityContextPersistenceFilter@79e90571, org.springframework.security.web.header.HeaderWriterFilter@29592929, org.springframework.web.filter.CorsFilter@4667c4c1, org.springframework.security.web.authentication.logout.LogoutFilter@4e6280de, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6614ecca, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4db568e1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@460b77d6, org.springframework.security.web.session.SessionManagementFilter@aa23f11, org.springframework.security.web.access.ExceptionTranslationFilter@2006fdaa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@20155dae]
+17-03-2023 07:41:25.536 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+17-03-2023 07:41:25.600 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+17-03-2023 07:41:25.619 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+17-03-2023 07:41:25.717 [main] INFO  ai.openfabric.api.Application.logStarted - Started Application in 6.956 seconds (JVM running for 7.762)
+17-03-2023 07:41:36.742 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17-03-2023 07:41:36.745 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+17-03-2023 07:41:36.752 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 7 ms
+17-03-2023 07:41:36.780 [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound.noHandlerFound - No mapping for GET /
+17-03-2023 07:41:36.847 [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound.noHandlerFound - No mapping for GET /favicon.ico
+17-03-2023 07:44:58.333 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+17-03-2023 07:44:58.344 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+17-03-2023 07:44:58.351 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+17-03-2023 07:47:04.424 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+17-03-2023 07:47:04.449 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_302 on Mohammads-Air with PID 31882 (/Users/dandashi/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dandashi in /Users/dandashi/Downloads/openfabric-test)
+17-03-2023 07:47:04.449 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+17-03-2023 07:47:05.426 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17-03-2023 07:47:05.487 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interfaces.
+17-03-2023 07:47:06.164 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+17-03-2023 07:47:06.169 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+17-03-2023 07:47:06.169 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+17-03-2023 07:47:06.169 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+17-03-2023 07:47:06.251 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+17-03-2023 07:47:06.251 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1729 ms
+17-03-2023 07:47:06.517 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+17-03-2023 07:47:06.561 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+17-03-2023 07:47:06.645 [main] INFO  liquibase.database.log - Set default schema name to public
+17-03-2023 07:47:06.763 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+17-03-2023 07:47:07.060 [main] INFO  liquibase.changelog.log - Creating database history table with name: public.databasechangelog
+17-03-2023 07:47:07.069 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+17-03-2023 07:47:07.140 [main] INFO  liquibase.changelog.log - Custom SQL executed
+17-03-2023 07:47:07.141 [main] INFO  liquibase.changelog.log - ChangeSet db/changelog/table-schema.xml::EXTENSION::andrei ran successfully in 17ms
+17-03-2023 07:47:07.152 [main] INFO  liquibase.changelog.log - Custom SQL executed
+17-03-2023 07:47:07.153 [main] INFO  liquibase.changelog.log - ChangeSet db/changelog/table-schema.xml::SEQUENCE::andrei ran successfully in 5ms
+17-03-2023 07:47:07.161 [main] INFO  liquibase.changelog.log - Table worker created
+17-03-2023 07:47:07.162 [main] INFO  liquibase.changelog.log - ChangeSet db/changelog/table-schema.xml::WO_01::andrei ran successfully in 7ms
+17-03-2023 07:47:07.165 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+17-03-2023 07:47:07.259 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+17-03-2023 07:47:07.282 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.12.Final
+17-03-2023 07:47:07.363 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17-03-2023 07:47:07.417 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17-03-2023 07:47:07.737 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17-03-2023 07:47:07.743 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+17-03-2023 07:47:07.775 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17-03-2023 07:47:09.928 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.Instant
+17-03-2023 07:47:09.936 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.OffsetDateTime
+17-03-2023 07:47:10.142 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: 8d6f60b2-f529-4df9-a7b1-c0d2e1b147ab
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+17-03-2023 07:47:10.199 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1123d461, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@64540344, org.springframework.security.web.context.SecurityContextPersistenceFilter@17189618, org.springframework.security.web.header.HeaderWriterFilter@4aa517c3, org.springframework.web.filter.CorsFilter@4667c4c1, org.springframework.security.web.authentication.logout.LogoutFilter@6614ecca, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6aadb092, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5621a671, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b2d8dcd, org.springframework.security.web.session.SessionManagementFilter@7c03f9d0, org.springframework.security.web.access.ExceptionTranslationFilter@1af82ba8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56d5460f]
+17-03-2023 07:47:10.521 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+17-03-2023 07:47:10.584 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+17-03-2023 07:47:10.601 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+17-03-2023 07:47:10.697 [main] INFO  ai.openfabric.api.Application.logStarted - Started Application in 6.624 seconds (JVM running for 7.445)
+17-03-2023 07:48:18.155 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+17-03-2023 07:48:18.162 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+17-03-2023 07:48:18.164 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+17-03-2023 10:55:30.672 [main] INFO  m.p.s.DotenvPropertySource.addToEnvironment - Initializing Dotenv with DotenvConfig{directory=null, filename=null, ignoreIfMalformed=false, ignoreIfMissing=true, systemProperties=false, prefix=null}
+17-03-2023 10:55:30.695 [main] INFO  ai.openfabric.api.Application.logStarting - Starting Application using Java 1.8.0_302 on Mohammads-MacBook-Air.local with PID 33609 (/Users/dandashi/Downloads/openfabric-test/openfabric-api/build/classes/java/main started by dandashi in /Users/dandashi/Downloads/openfabric-test)
+17-03-2023 10:55:30.696 [main] INFO  ai.openfabric.api.Application.logStartupProfileInfo - The following 2 profiles are active: "base", "local"
+17-03-2023 10:55:31.919 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17-03-2023 10:55:32.017 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate.registerRepositoriesIn - Finished Spring Data repository scanning in 89 ms. Found 1 JPA repository interfaces.
+17-03-2023 10:55:32.928 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+17-03-2023 10:55:32.935 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+17-03-2023 10:55:32.935 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+17-03-2023 10:55:32.936 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.68]
+17-03-2023 10:55:33.023 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+17-03-2023 10:55:33.024 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2212 ms
+17-03-2023 10:55:33.350 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+17-03-2023 10:55:33.619 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+17-03-2023 10:55:33.811 [main] INFO  liquibase.database.log - Set default schema name to public
+17-03-2023 10:55:33.976 [main] INFO  liquibase.lockservice.log - Successfully acquired change log lock
+17-03-2023 10:55:34.389 [main] INFO  liquibase.changelog.log - Reading from public.databasechangelog
+17-03-2023 10:55:34.428 [main] INFO  liquibase.lockservice.log - Successfully released change log lock
+17-03-2023 10:55:34.538 [main] INFO  o.h.jpa.internal.util.LogHelper.logPersistenceUnitInformation - HHH000204: Processing PersistenceUnitInfo [name: default]
+17-03-2023 10:55:34.571 [main] INFO  org.hibernate.Version.logVersion - HHH000412: Hibernate ORM core version 5.6.12.Final
+17-03-2023 10:55:34.687 [main] INFO  o.h.annotations.common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17-03-2023 10:55:34.767 [main] INFO  org.hibernate.dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+17-03-2023 10:55:35.141 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator.initiateService - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17-03-2023 10:55:35.148 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.buildNativeEntityManagerFactory - Initialized JPA EntityManagerFactory for persistence unit 'default'
+17-03-2023 10:55:35.195 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration.openEntityManagerInViewInterceptor - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17-03-2023 10:55:37.495 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.OffsetDateTime
+17-03-2023 10:55:37.503 [main] INFO  com.yahoo.elide.Elide.registerCustomSerde - Registering serde for type : class java.time.Instant
+17-03-2023 10:55:37.763 [main] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration.getOrDeducePassword - 
+
+Using generated security password: bd7ec1f9-d9e5-4f28-9422-4141b86e36d3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+17-03-2023 10:55:37.870 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1c98fe6f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1397b141, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f547af8, org.springframework.security.web.header.HeaderWriterFilter@75de7009, org.springframework.web.filter.CorsFilter@46e64760, org.springframework.security.web.authentication.logout.LogoutFilter@2762253e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d15789f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@656c5818, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@579dde54, org.springframework.security.web.session.SessionManagementFilter@983050b, org.springframework.security.web.access.ExceptionTranslationFilter@11dbcb3b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28bc9749]
+17-03-2023 10:55:38.278 [main] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration.checkTemplateLocationExists - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+17-03-2023 10:55:38.355 [main] INFO  o.a.coyote.http11.Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+17-03-2023 10:55:38.379 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+17-03-2023 10:55:38.490 [main] INFO  ai.openfabric.api.Application.logStarted - Started Application in 8.204 seconds (JVM running for 8.899)
+17-03-2023 10:56:12.731 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+17-03-2023 10:56:12.732 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+17-03-2023 10:56:12.738 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 6 ms
+17-03-2023 10:56:12.772 [http-nio-8080-exec-1] WARN  o.s.web.servlet.PageNotFound.noHandlerFound - No mapping for GET /
+17-03-2023 10:56:16.226 [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound.noHandlerFound - No mapping for GET /hello
+17-03-2023 10:58:44.267 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean.destroy - Closing JPA EntityManagerFactory for persistence unit 'default'
+17-03-2023 10:58:44.277 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+17-03-2023 10:58:44.283 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.

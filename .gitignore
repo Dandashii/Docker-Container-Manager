@@ -1,0 +1,4 @@
+# Project exclude paths
+/.gradle/
+/openfabric-api/build/
+/openfabric-api/build/classes/java/main/
