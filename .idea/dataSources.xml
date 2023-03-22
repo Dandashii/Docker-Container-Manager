@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="openfabric@localhost" uuid="2796935c-9cfd-414d-af7b-b28b5fc629dc">
+    <data-source source="LOCAL" name="openfabric@localhost" uuid="e671217e-1c4e-47c6-ab0f-a03b8c7563b4">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

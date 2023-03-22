@@ -4,8 +4,11 @@ import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.view.RedirectView;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -35,7 +38,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
         return new Docket(DocumentationType.OAS_30)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("ai.openfabric"))
+                .apis(RequestHandlerSelectors.basePackage("ai.openfabric.api.controller"))
                 .paths(PathSelectors.ant(REST_API_PREFIX + "/**"))
                 .build()
                 .groupName("REST-API")
