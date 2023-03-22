@@ -4,10 +4,10 @@ import ai.openfabric.api.model.Worker;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
-
+@Repository
 public interface WorkerRepository extends CrudRepository<Worker, String> {
-    Optional<Worker> findById(String id);
     Page<Worker> findAll(Pageable pageable);
+    Worker findByName(String name);
 }
